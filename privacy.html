@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy — Scrykey</title>
+    <meta name="description" content="Scrykey's privacy policy. Scrykey has no backend server of its own. It collects no analytics and no telemetry.">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <main class="page privacy">
+        <a href="index.html" class="back">&larr; Scrykey</a>
+
+        <h1>Privacy Policy</h1>
+        <p class="meta">Scrykey &mdash; BYOK intelligent search &middot; Last updated 9 April 2026</p>
+
+        <p>Scrykey is a bring-your-own-key search application for iOS and macOS. It runs entirely on your device. This policy explains &mdash; in plain language &mdash; what Scrykey does and does not do with your data.</p>
+
+        <h2>The short version</h2>
+        <ul>
+            <li>Scrykey has no backend server of its own.</li>
+            <li>Your search queries are sent directly from your device to the providers whose API keys you configure (currently Brave Search and Mistral AI).</li>
+            <li>Your API keys are stored in the Apple Keychain on your device and &mdash; if you enable iCloud Keychain &mdash; synchronised across your own Apple devices by Apple.</li>
+            <li>Scrykey collects no analytics, no telemetry, no crash reports, and has no third-party trackers.</li>
+            <li>There is no account to create. There is nothing to log in to.</li>
+        </ul>
+
+        <h2>What Scrykey sends, and where</h2>
+        <p>When you run a search, Scrykey's code on your device makes HTTPS requests to the API providers whose keys you have entered. As of this writing:</p>
+        <ul>
+            <li><strong>Brave Search</strong> &mdash; receives your search query and returns web results.</li>
+            <li><strong>Mistral AI</strong> &mdash; receives the search results together with your query, in order to synthesise an answer.</li>
+        </ul>
+        <p>These requests go directly from your device to those providers. Scrykey does not route them through any intermediary. Whatever those providers log or store is governed by <em>their</em> privacy policies, not this one. You should review them if you care about the details:</p>
+        <ul>
+            <li><a href="https://api-dashboard.search.brave.com/documentation/resources/privacy-notice">Brave Search API privacy notice</a></li>
+            <li><a href="https://legal.mistral.ai/terms/privacy-policy">Mistral AI privacy policy</a></li>
+        </ul>
+
+        <h2>What Scrykey stores on your device</h2>
+        <ul>
+            <li><strong>Your API keys</strong>, in the system Keychain. If iCloud Keychain is enabled on your device, Apple synchronises Keychain items across your Apple devices. Scrykey does not send your keys anywhere else.</li>
+            <li><strong>Your search history</strong> (queries, answers, citations), in a SwiftData store on your device. If iCloud is enabled for Scrykey, Apple may synchronise this history to your other Apple devices via CloudKit. Scrykey itself has no access to this iCloud data.</li>
+            <li><strong>Usage statistics</strong> (token and call counts, for your own cost tracking), in Apple's <code>NSUbiquitousKeyValueStore</code>. Same story: on your device and optionally Apple-synced between your own devices.</li>
+        </ul>
+        <p>Scrykey does not copy any of this to any server operated by Scrykey or its author, because no such server exists.</p>
+
+        <h2>What Scrykey does not do</h2>
+        <ul>
+            <li>Scrykey does not operate its own backend.</li>
+            <li>Scrykey does not collect analytics, page views, session data, device identifiers, or any usage telemetry.</li>
+            <li>Scrykey does not include any third-party SDKs for advertising, attribution, crash reporting, or tracking.</li>
+            <li>Scrykey does not sell, share, or monetise your data in any way. There is no &ldquo;data&rdquo; in any form Scrykey could sell &mdash; there is nothing to sell.</li>
+            <li>Scrykey does not require an account.</li>
+        </ul>
+
+        <h2>Children</h2>
+        <p>Scrykey is not directed at children under 13 and Scrykey's author does not knowingly collect any data from anyone. See above: Scrykey's author does not collect any data from anyone, period.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>If this policy changes in a material way, the &ldquo;Last updated&rdquo; date at the top will change and the old version will remain in the repository's git history.</p>
+
+        <h2>Contact</h2>
+        <p>Scrykey is an independent project by <strong>originalblez</strong>. Questions about this policy can be raised as an issue at <a href="https://github.com/originalblez/scrykey-public/issues">github.com/originalblez/scrykey-public/issues</a>.</p>
+
+        <footer class="footer">
+            &copy; 2026 originalblez &middot; <a href="index.html">Scrykey</a>
+        </footer>
+    </main>
+</body>
+</html>
