@@ -97,11 +97,91 @@ body {
 }
 
 .tagline {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 400;
+    color: var(--fg-dim);
+    letter-spacing: 0.1px;
+    margin: 0 0 14px;
+}
+
+.byok-line {
+    font-size: 14px;
     color: var(--fg-muted);
-    letter-spacing: 0.2px;
+    max-width: 440px;
+    margin: 0 auto;
+    line-height: 1.55;
+}
+
+.byok-line strong {
+    color: var(--fg);
+    font-weight: 600;
+}
+
+/* --- Section heading (shared small-caps label) ------------------------- */
+
+.pillars > h2,
+.cost > h2,
+.providers h2 {
+    margin: 0 0 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--fg-faint);
+}
+
+/* --- How it works (numbered steps) ------------------------------------- */
+
+.pillars {
+    margin: 0 0 96px;
+}
+
+.steps {
+    list-style: none;
     margin: 0;
+    padding: 0;
+}
+
+.steps li {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 24px 0;
+    border-top: 1px solid var(--rule);
+}
+
+.steps li:last-child {
+    border-bottom: 1px solid var(--rule);
+}
+
+.step-num {
+    flex: 0 0 auto;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--fg-faint);
+    color: var(--fg-muted);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+.steps h3 {
+    margin: 0 0 4px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--fg);
+    letter-spacing: -0.1px;
+}
+
+.steps p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--fg-muted);
+    line-height: 1.55;
 }
 
 /* --- Features (flat, typographic) --------------------------------------- */
@@ -136,19 +216,92 @@ body {
     line-height: 1.5;
 }
 
+/* --- Cost section (figure grid) ---------------------------------------- */
+
+.cost {
+    margin: 0 0 96px;
+}
+
+.cost-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin: 0 0 24px;
+}
+
+.cost-cell {
+    padding: 24px 0 0;
+    border-top: 1px solid var(--rule);
+}
+
+.cost-figure {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--fg);
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.cost-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--fg-faint);
+    margin-bottom: 10px;
+}
+
+.cost-cell p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--fg-muted);
+    line-height: 1.55;
+}
+
+.cost code {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    padding: 1px 5px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    color: var(--fg);
+}
+
+.cost .note {
+    margin: 0 0 18px;
+    padding: 14px 16px;
+    font-size: 13px;
+    color: var(--fg-muted);
+    line-height: 1.55;
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 2px solid var(--fg-faint);
+    border-radius: 2px;
+}
+
+.cost .small {
+    margin: 0;
+    font-size: 13px;
+    color: var(--fg-faint);
+    letter-spacing: 0.2px;
+}
+
+.cost .small a {
+    color: var(--fg-muted);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 120ms ease, border-color 120ms ease;
+}
+
+.cost .small a:hover {
+    color: var(--fg);
+    border-bottom-color: var(--fg-muted);
+}
+
 /* --- Providers section -------------------------------------------------- */
 
 .providers {
     margin: 0 0 96px;
-}
-
-.providers h2 {
-    margin: 0 0 20px;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--fg-faint);
 }
 
 .providers p {
@@ -163,62 +316,31 @@ body {
     font-weight: 600;
 }
 
-.providers .subhead {
-    margin: 36px 0 16px;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--fg-faint);
-}
+/* --- Twin pillars (BYOK + On-device) ----------------------------------- */
 
-.providers code {
-    font-family: "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.88em;
-    padding: 1px 5px;
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 4px;
-    color: var(--fg);
-}
-
-.providers .small {
-    margin-top: 24px;
-    font-size: 13px;
-    color: var(--fg-faint);
-    letter-spacing: 0.2px;
-}
-
-.providers .small a {
-    color: var(--fg-muted);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: color 120ms ease, border-color 120ms ease;
-}
-
-.providers .small a:hover {
-    color: var(--fg);
-    border-bottom-color: var(--fg-muted);
-}
-
-/* --- Manifesto section -------------------------------------------------- */
-
-.manifesto {
+.pillars-twin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
     margin: 0 0 96px;
+    padding: 36px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
 }
 
-.manifesto h2 {
-    margin: 0 0 12px;
-    font-size: 14px;
+.pillar h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--fg-faint);
+    color: var(--fg);
+    letter-spacing: -0.1px;
+    text-transform: none;
 }
 
-.manifesto p {
+.pillar p {
     margin: 0;
-    font-size: 17px;
-    color: var(--fg-dim);
+    font-size: 15px;
+    color: var(--fg-muted);
     line-height: 1.55;
 }
 
@@ -353,8 +475,21 @@ body {
     .logo { width: 120px; height: 120px; }
     .wordmark { width: 220px; }
     .hero { margin-bottom: 72px; }
+    .pillars { margin-bottom: 72px; }
     .features { margin-bottom: 72px; }
-    .manifesto { margin-bottom: 72px; }
+    .cost { margin-bottom: 72px; }
+    .providers { margin-bottom: 72px; }
+    .pillars-twin {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-bottom: 72px;
+        padding: 32px 0;
+    }
+    .cost-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .cost-figure { font-size: 30px; }
     .soon { margin-bottom: 56px; }
     .privacy h1 { font-size: 28px; }
     .privacy h2 { margin-top: 44px; }

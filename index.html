@@ -17,7 +17,35 @@
                 <img src="assets/scrykey_logo.png" alt="Scrykey logo" class="logo">
             </div>
             <img src="assets/scrykey_wordmark.png" alt="Scrykey" class="wordmark">
-            <p class="tagline">Your keys. Your intelligent search. No ads.</p>
+            <p class="tagline">Intelligent search that runs on your device.</p>
+            <p class="byok-line">Bring your own <strong>Brave Search</strong> and <strong>Mistral</strong> API keys. No Scrykey account. No Scrykey bill.</p>
+        </section>
+
+        <section class="pillars" aria-label="How Scrykey works">
+            <h2>How it works</h2>
+            <ol class="steps">
+                <li>
+                    <span class="step-num">1</span>
+                    <div>
+                        <h3>Get two API keys</h3>
+                        <p>Sign up with Brave Search and Mistral. Brave includes free monthly credits; Mistral&rsquo;s small model is cheap enough that typical use costs pennies.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">2</span>
+                    <div>
+                        <h3>Paste them into Scrykey</h3>
+                        <p>Keys live in the system Keychain on your device. They never touch a Scrykey server &mdash; because there isn&rsquo;t one.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">3</span>
+                    <div>
+                        <h3>Search</h3>
+                        <p>Queries go directly from your device to the providers you configured. You pay them, not us.</p>
+                    </div>
+                </li>
+            </ol>
         </section>
 
         <ul class="features" aria-label="Features">
@@ -35,20 +63,40 @@
             </li>
         </ul>
 
-        <section class="providers">
-            <h2>Why Brave and Mistral</h2>
-            <p>Most search apps hand your queries to Google, Bing, or a frontier AI lab that trains on your data. Scrykey doesn&rsquo;t.</p>
-            <p><strong>Brave Search</strong> runs its own independent web index. It isn&rsquo;t a front-end for Bing or Google, so your queries aren&rsquo;t funnelled back to the companies Scrykey exists to avoid.</p>
-            <p><strong>Mistral AI</strong> is a European model provider with a clearer data-handling stance than most US frontier labs. Its small model is genuinely good at the &ldquo;read these search results, answer with citations&rdquo; task Scrykey uses it for.</p>
-            <h3 class="subhead">What 1,000 searches per month costs</h3>
-            <p>Brave includes $5 of free monthly credits, which covers around 1,000 calls at the current rate. Mistral is billed in fractions of a cent per search &mdash; roughly $0.50 for 1,000 basic searches on <code>mistral-small-latest</code>.</p>
-            <p>So: a heavy month of a thousand searches costs about <strong>$0.50</strong>. A light month of a hundred searches costs <strong>nothing</strong>. You pay the providers directly &mdash; there is no Scrykey middleman and no Scrykey bill.</p>
-            <p class="small">Current pricing: <a href="https://brave.com/search/api/">Brave Search API</a> &middot; <a href="https://mistral.ai/pricing">Mistral AI</a></p>
+        <section class="cost" aria-label="What it costs">
+            <h2>What it costs</h2>
+            <div class="cost-grid">
+                <div class="cost-cell">
+                    <div class="cost-figure">~$0.05</div>
+                    <div class="cost-label">100 searches</div>
+                    <p>Brave&rsquo;s free credits cover the index side. Mistral comes to a handful of cents on <code>mistral-small-latest</code>.</p>
+                </div>
+                <div class="cost-cell">
+                    <div class="cost-figure">~$0.50</div>
+                    <div class="cost-label">1,000 searches</div>
+                    <p>Still inside Brave&rsquo;s $5 free monthly credit for the index side; Mistral is billed in fractions of a cent per query.</p>
+                </div>
+            </div>
+            <p class="note">Research mode fans out across many queries per run, so deep dives cost more than a basic search &mdash; budget a few cents per report.</p>
+            <p class="small">You pay the providers directly. Current pricing: <a href="https://brave.com/search/api/">Brave Search API</a> &middot; <a href="https://mistral.ai/pricing">Mistral AI</a></p>
         </section>
 
-        <section class="manifesto">
-            <h2>On-device only</h2>
-            <p>Your queries go directly from your device to the providers whose API keys you configure. There is no Scrykey server. Keys live in the system Keychain.</p>
+        <section class="providers">
+            <h2>Why Brave and Mistral</h2>
+            <p>Most search apps hand your queries to Google, Bing, or a frontier lab that trains on your data. Scrykey doesn&rsquo;t.</p>
+            <p><strong>Brave Search</strong> runs its own independent web index &mdash; not a front-end for Bing or Google &mdash; so queries aren&rsquo;t funnelled back to the companies Scrykey exists to avoid.</p>
+            <p><strong>Mistral AI</strong> is a European provider with a clearer data-handling stance than most US frontier labs, and its small model is genuinely good at the &ldquo;read these results, answer with citations&rdquo; task Scrykey uses it for.</p>
+        </section>
+
+        <section class="pillars-twin" aria-label="Principles">
+            <div class="pillar">
+                <h2>Bring your own keys</h2>
+                <p>No subscription, no middleman. You own the accounts, you own the billing, you own the data relationship with each provider.</p>
+            </div>
+            <div class="pillar">
+                <h2>On-device only</h2>
+                <p>There is no Scrykey server. Queries and keys never leave your device except to go to the providers you configured.</p>
+            </div>
         </section>
 
         <p class="soon"><strong>Coming soon</strong> &middot; App Store &middot; Mac App Store</p>
