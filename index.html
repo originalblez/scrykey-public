@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Scrykey — your keys, your intelligent search</title>
-    <meta name="description" content="Scrykey is a bring-your-own-key intelligent search app for iOS and macOS. Runs entirely on your device. No backend. No ads. No tracking.">
+    <title>Scrykey — private AI search with your own keys</title>
+    <meta name="description" content="Scrykey is a bring-your-own-key AI search app for iOS and macOS. No ads, no tracking, no Scrykey server. Your queries go direct to Brave Search and Mistral AI.">
     <meta name="theme-color" content="#000000">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -13,85 +13,87 @@
 <body>
     <main class="page">
         <section class="hero">
-            <div class="logo-wrap">
+            <div class="hero-row">
                 <img src="assets/scrykey_logo.png" alt="Scrykey logo" class="logo">
+                <div class="hero-text">
+                    <h1 class="brand">scrykey</h1>
+                    <p class="tagline">Private AI search.<br>Your keys. No ads. No tracking.</p>
+                </div>
             </div>
-            <img src="assets/scrykey_wordmark.png" alt="Scrykey" class="wordmark">
-            <p class="tagline">Intelligent search that runs on your device.</p>
-            <p class="byok-line">Bring your own <strong>Brave Search</strong> and <strong>Mistral</strong> API keys. No Scrykey account. No Scrykey bill.</p>
         </section>
 
-        <section class="pillars" aria-label="How Scrykey works">
-            <h2>How it works</h2>
+        <section class="modes" aria-label="Search modes">
+            <div class="mode">
+                <h3>Search</h3>
+                <p>Quick, cited answers from fresh web results.</p>
+            </div>
+            <div class="mode">
+                <h3>Both Sides</h3>
+                <p>See every angle of a debatable question.</p>
+            </div>
+            <div class="mode">
+                <h3>Deep Research</h3>
+                <p>Multi-source synthesis across dozens of results.</p>
+            </div>
+        </section>
+
+        <section class="why" aria-label="Why your own keys">
+            <h2>Why your own keys?</h2>
+            <p class="why-intro">Most AI search apps sell your data or lock you into subscriptions. Scrykey does neither. You bring two API keys and keep full control.</p>
+
+            <div class="benefits">
+                <div class="benefit">
+                    <h3>No tracking, no profiling</h3>
+                    <p>Queries go directly from your device to Brave and Mistral. There is no Scrykey server in between.</p>
+                </div>
+                <div class="benefit">
+                    <h3>No ads, ever</h3>
+                    <p>You pay the provider directly at cost. No markup, no sponsored results, no dark patterns.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Transparent pricing</h3>
+                    <p>Brave gives 1,000 free searches per month. Mistral costs about $0.50 for 1,000 searches. You can check your usage anytime in the app.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="setup" aria-label="Get started">
+            <h2>Get started in two minutes</h2>
             <ol class="steps">
                 <li>
                     <span class="step-num">1</span>
                     <div>
-                        <h3>Get two API keys</h3>
-                        <p>Sign up with Brave Search and Mistral. Brave includes free monthly credits; Mistral&rsquo;s small model is cheap enough that typical use costs pennies.</p>
+                        <h3>Get a Brave Search key</h3>
+                        <p>Sign up at <a href="https://brave.com/search/api/">brave.com/search/api</a>. You get 1,000 free searches per month, then $5 per 1,000 after that.</p>
                     </div>
                 </li>
                 <li>
                     <span class="step-num">2</span>
                     <div>
-                        <h3>Paste them into Scrykey</h3>
-                        <p>Keys live in the system Keychain on your device. They never touch a Scrykey server &mdash; because there isn&rsquo;t one.</p>
+                        <h3>Get a Mistral AI key</h3>
+                        <p>Sign up at <a href="https://console.mistral.ai/api-keys/">console.mistral.ai</a>. The small model Scrykey uses costs fractions of a cent per query.</p>
                     </div>
                 </li>
                 <li>
                     <span class="step-num">3</span>
                     <div>
-                        <h3>Search</h3>
-                        <p>Queries go directly from your device to the providers you configured. You pay them, not us.</p>
+                        <h3>Paste them into Scrykey</h3>
+                        <p>Keys are stored in your system Keychain. They never touch a Scrykey server &mdash; because there isn&rsquo;t one.</p>
                     </div>
                 </li>
             </ol>
         </section>
 
-        <ul class="features" aria-label="Features">
-            <li>
-                <h3>Search</h3>
-                <p>Quick, well-cited answers from fresh web results.</p>
-            </li>
-            <li>
-                <h3>For &amp; Against</h3>
-                <p>Both sides of any debatable question, side by side.</p>
-            </li>
-            <li>
-                <h3>Research</h3>
-                <p>Multi-step deep dives that synthesise dozens of sources.</p>
-            </li>
-        </ul>
-
-        <section class="cost" aria-label="What it costs">
-            <h2>What it costs</h2>
-            <div class="cost-grid">
-                <div class="cost-cell">
-                    <div class="cost-figure">~$0.05</div>
-                    <div class="cost-label">100 searches</div>
-                    <p>Brave&rsquo;s free credits cover the index side. Mistral comes to a handful of cents on <code>mistral-small-latest</code>.</p>
-                </div>
-                <div class="cost-cell">
-                    <div class="cost-figure">~$0.50</div>
-                    <div class="cost-label">1,000 searches</div>
-                    <p>Still inside Brave&rsquo;s $5 free monthly credit for the index side; Mistral is billed in fractions of a cent per query.</p>
-                </div>
-            </div>
-            <p class="note">Research mode fans out across many queries per run, so deep dives cost more than a basic search &mdash; budget a few cents per report.</p>
-            <p class="small">You pay the providers directly. Current pricing: <a href="https://brave.com/search/api/">Brave Search API</a> &middot; <a href="https://mistral.ai/pricing">Mistral AI</a></p>
-        </section>
-
         <section class="providers">
             <h2>Why Brave and Mistral</h2>
-            <p>Most search apps hand your queries to Google, Bing, or a frontier lab that trains on your data. Scrykey doesn&rsquo;t.</p>
-            <p><strong>Brave Search</strong> runs its own independent web index &mdash; not a front-end for Bing or Google &mdash; so queries aren&rsquo;t funnelled back to the companies Scrykey exists to avoid.</p>
-            <p><strong>Mistral AI</strong> is a European provider with a clearer data-handling stance than most US frontier labs, and its small model is genuinely good at the &ldquo;read these results, answer with citations&rdquo; task Scrykey uses it for.</p>
+            <p><strong>Brave Search</strong> runs its own independent web index &mdash; not a front-end for Bing or Google &mdash; so your queries aren&rsquo;t funnelled back to the companies Scrykey exists to avoid.</p>
+            <p><strong>Mistral AI</strong> is a European provider with a clear data-handling stance. Its small model is fast, cheap, and genuinely good at the &ldquo;read these results, answer with citations&rdquo; task Scrykey uses it for.</p>
         </section>
 
         <section class="pillars-twin" aria-label="Principles">
             <div class="pillar">
                 <h2>Bring your own keys</h2>
-                <p>No subscription, no middleman. You own the accounts, you own the billing, you own the data relationship with each provider.</p>
+                <p>No subscription, no middleman. You own the accounts, the billing, and the data relationship with each provider.</p>
             </div>
             <div class="pillar">
                 <h2>On-device only</h2>

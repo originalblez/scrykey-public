@@ -1,5 +1,5 @@
-/* Scrykey public site — shared styles.
-   Flat, typographic, generous whitespace. Palette mirrors OnboardingView.swift. */
+/* Scrykey public site — styles.
+   Dark, typographic, generous whitespace. Palette matches the app. */
 
 :root {
     --bg: #000;
@@ -8,8 +8,8 @@
     --fg-muted: rgba(255, 255, 255, 0.48);
     --fg-faint: rgba(255, 255, 255, 0.28);
     --rule: rgba(255, 255, 255, 0.08);
-    --cyan: rgb(38, 217, 242);
-    --link: rgb(115, 217, 242);
+    --accent: #e53935;
+    --link: #e53935;
 
     --col: 560px;
 }
@@ -33,95 +33,73 @@ body {
     background:
         radial-gradient(
             ellipse 800px 560px at 50% -80px,
-            rgba(26, 140, 166, 0.45) 0%,
+            rgba(26, 140, 166, 0.30) 0%,
             rgba(13, 25, 45, 0) 70%
         ),
         #000;
     background-attachment: fixed;
 }
 
+a {
+    color: var(--link);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(229, 57, 53, 0.3);
+    transition: border-color 120ms ease;
+}
+
+a:hover {
+    border-bottom-color: var(--link);
+}
+
 .page {
     max-width: var(--col);
     margin: 0 auto;
-    padding: 88px 24px 96px;
+    padding: 80px 24px 96px;
 }
 
 /* --- Hero ---------------------------------------------------------------- */
 
 .hero {
-    text-align: center;
-    margin-bottom: 96px;
+    margin-bottom: 64px;
 }
 
-.logo-wrap {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 4px;
-}
-
-.logo-wrap::before {
-    content: "";
-    position: absolute;
-    inset: -50px;
-    background: radial-gradient(
-        circle at center,
-        rgba(38, 217, 242, 0.45) 0%,
-        rgba(38, 217, 242, 0) 60%
-    );
-    filter: blur(24px);
-    z-index: 0;
-    pointer-events: none;
-    animation: halo-pulse 4.8s ease-in-out infinite;
-}
-
-@keyframes halo-pulse {
-    0%, 100% { opacity: 0.70; }
-    50%      { opacity: 1.00; }
+.hero-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .logo {
-    position: relative;
-    width: 144px;
-    height: 144px;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
     object-fit: contain;
-    filter: drop-shadow(0 6px 18px rgba(38, 217, 242, 0.35));
-    z-index: 1;
+    flex-shrink: 0;
 }
 
-.wordmark {
-    display: block;
-    margin: 8px auto 18px;
-    width: 260px;
-    max-width: 80%;
-    filter: drop-shadow(0 4px 10px rgba(38, 217, 242, 0.25));
+.hero-text {
+    flex: 1;
+}
+
+.brand {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 28px;
+    font-weight: 300;
+    margin: 0 0 6px;
+    letter-spacing: -0.5px;
 }
 
 .tagline {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 400;
-    color: var(--fg-dim);
-    letter-spacing: 0.1px;
-    margin: 0 0 14px;
-}
-
-.byok-line {
-    font-size: 14px;
     color: var(--fg-muted);
-    max-width: 440px;
-    margin: 0 auto;
-    line-height: 1.55;
+    margin: 0;
+    line-height: 1.5;
 }
 
-.byok-line strong {
-    color: var(--fg);
-    font-weight: 600;
-}
+/* --- Section headings ---------------------------------------------------- */
 
-/* --- Section heading (shared small-caps label) ------------------------- */
-
-.pillars > h2,
-.cost > h2,
-.providers h2 {
+h2 {
     margin: 0 0 20px;
     font-size: 12px;
     font-weight: 600;
@@ -130,10 +108,80 @@ body {
     color: var(--fg-faint);
 }
 
-/* --- How it works (numbered steps) ------------------------------------- */
+/* --- Modes --------------------------------------------------------------- */
 
-.pillars {
-    margin: 0 0 96px;
+.modes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 64px;
+}
+
+.mode {
+    padding: 20px 16px;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.mode h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--fg);
+}
+
+.mode p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--fg-muted);
+    line-height: 1.45;
+}
+
+/* --- Why your own keys --------------------------------------------------- */
+
+.why {
+    margin-bottom: 64px;
+}
+
+.why-intro {
+    font-size: 16px;
+    color: var(--fg-dim);
+    margin: 0 0 24px;
+    line-height: 1.6;
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.benefit {
+    padding: 18px 20px;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.benefit h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--fg);
+}
+
+.benefit p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--fg-muted);
+    line-height: 1.5;
+}
+
+/* --- Get started (numbered steps) ---------------------------------------- */
+
+.setup {
+    margin-bottom: 64px;
 }
 
 .steps {
@@ -184,124 +232,14 @@ body {
     line-height: 1.55;
 }
 
-/* --- Features (flat, typographic) --------------------------------------- */
-
-.features {
-    list-style: none;
-    margin: 0 0 96px;
-    padding: 0;
+.steps a {
+    color: var(--link);
 }
 
-.features li {
-    padding: 28px 0;
-    border-top: 1px solid var(--rule);
-}
-
-.features li:last-child {
-    border-bottom: 1px solid var(--rule);
-}
-
-.features h3 {
-    margin: 0 0 4px;
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--fg);
-    letter-spacing: -0.1px;
-}
-
-.features p {
-    margin: 0;
-    font-size: 15px;
-    color: var(--fg-muted);
-    line-height: 1.5;
-}
-
-/* --- Cost section (figure grid) ---------------------------------------- */
-
-.cost {
-    margin: 0 0 96px;
-}
-
-.cost-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-    margin: 0 0 24px;
-}
-
-.cost-cell {
-    padding: 24px 0 0;
-    border-top: 1px solid var(--rule);
-}
-
-.cost-figure {
-    font-size: 34px;
-    font-weight: 700;
-    color: var(--fg);
-    letter-spacing: -0.5px;
-    line-height: 1.1;
-    margin-bottom: 4px;
-}
-
-.cost-label {
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--fg-faint);
-    margin-bottom: 10px;
-}
-
-.cost-cell p {
-    margin: 0;
-    font-size: 14px;
-    color: var(--fg-muted);
-    line-height: 1.55;
-}
-
-.cost code {
-    font-family: "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.88em;
-    padding: 1px 5px;
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 4px;
-    color: var(--fg);
-}
-
-.cost .note {
-    margin: 0 0 18px;
-    padding: 14px 16px;
-    font-size: 13px;
-    color: var(--fg-muted);
-    line-height: 1.55;
-    background: rgba(255, 255, 255, 0.03);
-    border-left: 2px solid var(--fg-faint);
-    border-radius: 2px;
-}
-
-.cost .small {
-    margin: 0;
-    font-size: 13px;
-    color: var(--fg-faint);
-    letter-spacing: 0.2px;
-}
-
-.cost .small a {
-    color: var(--fg-muted);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: color 120ms ease, border-color 120ms ease;
-}
-
-.cost .small a:hover {
-    color: var(--fg);
-    border-bottom-color: var(--fg-muted);
-}
-
-/* --- Providers section -------------------------------------------------- */
+/* --- Providers section --------------------------------------------------- */
 
 .providers {
-    margin: 0 0 96px;
+    margin: 0 0 64px;
 }
 
 .providers p {
@@ -316,20 +254,19 @@ body {
     font-weight: 600;
 }
 
-/* --- Twin pillars (BYOK + On-device) ----------------------------------- */
+/* --- Twin pillars (BYOK + On-device) ------------------------------------- */
 
 .pillars-twin {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
-    margin: 0 0 96px;
+    margin: 0 0 64px;
     padding: 36px 0;
     border-top: 1px solid var(--rule);
     border-bottom: 1px solid var(--rule);
 }
 
 .pillar h2 {
-    margin: 0 0 10px;
     font-size: 18px;
     font-weight: 600;
     color: var(--fg);
@@ -344,7 +281,7 @@ body {
     line-height: 1.55;
 }
 
-/* --- Coming soon (quiet text, not a box) ------------------------------- */
+/* --- Coming soon --------------------------------------------------------- */
 
 .soon {
     text-align: center;
@@ -372,6 +309,7 @@ body {
 .footer a {
     color: var(--fg-muted);
     text-decoration: none;
+    border-bottom: none;
 }
 
 .footer a:hover {
@@ -384,7 +322,7 @@ body {
     color: var(--fg-faint);
 }
 
-/* --- Privacy page typography -------------------------------------------- */
+/* --- Privacy page typography --------------------------------------------- */
 
 .privacy .back {
     display: inline-block;
@@ -393,6 +331,7 @@ body {
     color: var(--fg-faint);
     text-decoration: none;
     letter-spacing: 0.2px;
+    border-bottom: none;
 }
 
 .privacy .back:hover {
@@ -443,13 +382,6 @@ body {
 
 .privacy a {
     color: var(--link);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(115, 217, 242, 0.3);
-    transition: border-color 120ms ease;
-}
-
-.privacy a:hover {
-    border-bottom-color: var(--link);
 }
 
 .privacy code {
@@ -471,25 +403,24 @@ body {
 
 @media (max-width: 520px) {
     html, body { font-size: 16px; }
-    .page { padding: 64px 22px 72px; }
-    .logo { width: 120px; height: 120px; }
-    .wordmark { width: 220px; }
-    .hero { margin-bottom: 72px; }
-    .pillars { margin-bottom: 72px; }
-    .features { margin-bottom: 72px; }
-    .cost { margin-bottom: 72px; }
-    .providers { margin-bottom: 72px; }
+    .page { padding: 48px 22px 72px; }
+    .logo { width: 64px; height: 64px; border-radius: 16px; }
+    .brand { font-size: 24px; }
+    .hero { margin-bottom: 48px; }
+    .modes {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 48px;
+    }
+    .why { margin-bottom: 48px; }
+    .setup { margin-bottom: 48px; }
+    .providers { margin-bottom: 48px; }
     .pillars-twin {
         grid-template-columns: 1fr;
         gap: 28px;
-        margin-bottom: 72px;
+        margin-bottom: 48px;
         padding: 32px 0;
     }
-    .cost-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-    .cost-figure { font-size: 30px; }
     .soon { margin-bottom: 56px; }
     .privacy h1 { font-size: 28px; }
     .privacy h2 { margin-top: 44px; }
