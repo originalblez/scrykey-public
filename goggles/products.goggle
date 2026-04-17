@@ -1,0 +1,23 @@
+! name: Scrykey — Products & Reviews
+! description: Boosts independent review sites; downranks affiliate spam
+! public: false
+! author: originalblez
+
+$boost=10,site=rtings.com
+$boost=10,site=thewirecutter.com
+$boost=9,site=which.co.uk
+$boost=8,site=techradar.com
+$boost=8,site=tomsguide.com
+$boost=8,site=tomshardware.com
+$boost=7,site=pcmag.com
+$boost=7,site=cnet.com
+$boost=6,site=engadget.com
+$boost=6,site=theverge.com
+$boost=6,site=gsmarena.com
+$boost=5,site=reddit.com
+
+$downrank=9,site=bestreviews.com
+$downrank=8,site=buzzfeed.com
+$downrank=7,site=sleepfoundation.org
+$downrank=6,site=toptenreviews.com
+$downrank=5,site=businessinsider.com

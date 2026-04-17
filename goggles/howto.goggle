@@ -1,0 +1,22 @@
+! name: Scrykey — How-To & Instructions
+! description: Boosts official documentation and authoritative how-to sources
+! public: false
+! author: originalblez
+
+$boost=10,site=developer.mozilla.org
+$boost=10,site=developer.apple.com
+$boost=10,site=docs.python.org
+$boost=9,site=learn.microsoft.com
+$boost=9,site=developer.android.com
+$boost=9,site=docs.swift.org
+$boost=8,site=stackoverflow.com
+$boost=8,site=github.com
+$boost=7,site=docs.github.com
+$boost=7,site=kubernetes.io
+$boost=7,site=docs.docker.com
+$boost=6,site=digitalocean.com
+$boost=5,site=css-tricks.com
+
+$downrank=7,site=w3schools.com
+$downrank=5,site=geeksforgeeks.org
+$downrank=5,site=javatpoint.com

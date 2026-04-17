@@ -1,0 +1,20 @@
+! name: Scrykey — Academic & Research
+! description: Boosts peer-reviewed and academic sources
+! public: false
+! author: originalblez
+
+$boost=10,site=arxiv.org
+$boost=10,site=pubmed.ncbi.nlm.nih.gov
+$boost=9,site=nature.com
+$boost=9,site=science.org
+$boost=8,site=springer.com
+$boost=8,site=jstor.org
+$boost=8,site=ieeexplore.ieee.org
+$boost=7,site=sciencedirect.com
+$boost=7,site=acm.org
+$boost=7,site=ssrn.com
+$boost=6,site=researchgate.net
+$boost=5,site=scholar.google.com
+
+$downrank=8,site=academia.edu
+$downrank=6,site=medium.com

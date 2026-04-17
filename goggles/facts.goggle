@@ -1,0 +1,19 @@
+! name: Scrykey — Facts & Reference
+! description: Boosts encyclopaedic and official sources for factual queries
+! public: false
+! author: originalblez
+
+$boost=10,site=wikipedia.org
+$boost=9,site=britannica.com
+$boost=8,site=gov.uk
+$boost=8,site=nhs.uk
+$boost=8,site=who.int
+$boost=7,site=ons.gov.uk
+$boost=7,site=un.org
+$boost=7,site=imf.org
+$boost=6,site=worldbank.org
+$boost=6,site=statista.com
+$boost=5,site=bbc.co.uk
+
+$downrank=7,site=answers.com
+$downrank=6,site=ask.com

@@ -1,0 +1,27 @@
+! name: Scrykey — News & Current Events
+! description: Boosts authoritative news sources; downranks tabloids and aggregators
+! public: false
+! author: originalblez
+
+$boost=10,site=reuters.com
+$boost=10,site=apnews.com
+$boost=9,site=bbc.co.uk
+$boost=9,site=bbc.com
+$boost=8,site=ft.com
+$boost=8,site=economist.com
+$boost=8,site=theguardian.com
+$boost=7,site=bloomberg.com
+$boost=7,site=sky.com
+$boost=7,site=independent.co.uk
+$boost=7,site=telegraph.co.uk
+$boost=6,site=politico.eu
+$boost=6,site=dw.com
+$boost=6,site=aljazeera.com
+
+$downrank=8,site=dailymail.co.uk
+$downrank=8,site=express.co.uk
+$downrank=8,site=mirror.co.uk
+$downrank=8,site=thesun.co.uk
+$downrank=7,site=buzzfeed.com
+$downrank=6,site=msn.com
+$downrank=5,site=yahoo.com
